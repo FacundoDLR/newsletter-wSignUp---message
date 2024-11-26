@@ -32,6 +32,7 @@
 }
 body {
   font-family: var(--font-primary);
+  color: var(--Dark-Slate-Grey);
 }
 h1 {
   margin: 0;
@@ -44,10 +45,88 @@ li {
 h2 {
   font-size: var(--font-size-xl);
 }
+main{
+  height: 100vh;
+}
 
 .none {
   display: none;
 }
+
+.container {
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.container > h1,
+.container > p,
+ul,
+.contact-form input[type="email"] {
+  margin-block-end: 1.3rem;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  padding-inline-start: 2rem;
+  margin-block-end: 0.5rem;
+}
+ul li::before {
+  content: url("/assets/images/icon-list.svg");
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  display: block;
+}
+.contact-form legend {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+  margin-block-end: 0.5rem;
+}
+.contact-form input[type="email"] {
+  border: 1px solid var(--Grey);
+}
+
+.button {
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  background-color: var(--Tomato);
+  box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+form{
+  height: 100%;
+}
+.contact-form-response{
+  place-items: center;
+  height: 100%;
+  padding-block-start: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.response-description img{
+  max-width: 50px;
+  height: auto;
+}
+.response-description img,
+.response-description h2{
+  padding-block-end: 1.3rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
