@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
@@ -21,10 +20,10 @@
 
   <main>
 
-    <img class=" none" src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+    <img class=" " src="./assets/images/illustration-sign-up-mobile.svg" alt="">
 
     <div class="container">
-      <div class=" none">
+      <div class=" ">
         <h1>Stay updated!</h1>
 
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -37,20 +36,20 @@
       </div>
 
 
-      <form class="contact-form none" action=""> <!-- Sign-up form start -->
+      <form class="contact-form " action=""> <!-- Sign-up form start -->
 
-        <div class="contact-form-form">
-          <legend>Email adress</legend>
-          <input type="email" name="email" placeholder="email@company.com" title="Valid email required"
-            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
-          <input class="button" type="submit" value="Subscribe to monthly newsletter"> <!-- Sign-up form end -->
-
+        <div class="contact-form-emailGroup">
+          <label for="email">Email adress</label>
+          <span id="error-message" class="error-message">Valid email required</span>
         </div>
+        <input type="email" id="email" name="email" placeholder="email@company.com" title="Valid email required"
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9\-]+(\.[a-z0-9\-]+)*(\.[a-z]{2,15})$" required>
+        <input class="button" type="submit" value="Subscribe to monthly newsletter"> <!-- Sign-up form end -->
 
       </form>
 
-      <div class="contact-form-response "> <!-- Success message start -->
-          
+      <div class="contact-form-response none"> <!-- Success message start -->
+
         <div class="response-description">
           <img src="./assets/images/icon-success.svg" alt="icon success">
 
@@ -59,11 +58,11 @@
           <p>A confirmation email has been sent to <strong>ash@loremcompany.com.</strong> Please open it and click the
             button inside to confirm your subscription.</p>
         </div>
-        
+
         <input class="button" type="button" value="Dismiss message"></input>
 
       </div> <!-- Success message end -->
-      
+
     </div>
 
   </main>
