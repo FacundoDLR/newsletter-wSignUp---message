@@ -112,15 +112,18 @@ ul li::before {
   border: 1px solid var(--Grey);
 }
 
-.contact-form [required]:valid {
-  border: thin solid var(--form-ok-color);
+.contact-form .valid {
+  border: thin solid var(--form-ok-color) !important;
   background-color: rgb(234, 255, 234);
   color: var(--form-ok-color);
 }
-.contact-form [required]:invalid {
-  border: thin solid var(--form-error-color);
+.contact-form .invalid {
+  border: thin solid var(--form-error-color) !important;
   background-color: rgb(255, 228, 228);
   color: var(--form-error-color);
+}
+.shake{
+  animation: error-shake 0.5s ease-in-out;
 }
 /* .contact-form-error {
   background-color: var(--form-error-color);
@@ -130,19 +133,25 @@ ul li::before {
 .contact-form-error.is-active {
   display: block;
   animation: show-message 1s 1 normal 0s ease-out both;
-}
+}*/
 
-@keyframes show-message {
+@keyframes error-shake {
   0% {
-    visibility: hidden;
-    opacity: 0;
+    transform: translateX(0);
   }
-
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
   100% {
-    visibility: visible;
-    opacity: 1;
+    transform: translateX(0);
   }
-} */
+} 
 
 .button {
   background-color: var(--Dark-Slate-Grey);

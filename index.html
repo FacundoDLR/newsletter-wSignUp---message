@@ -20,10 +20,10 @@
 
   <main>
 
-    <img class=" " src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+    <img id="hero-img" class=" " src="./assets/images/illustration-sign-up-mobile.svg" alt="">
 
     <div class="container">
-      <div class=" ">
+      <div id="hero-text" class=" ">
         <h1>Stay updated!</h1>
 
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -36,30 +36,30 @@
       </div>
 
 
-      <form class="contact-form " action=""> <!-- Sign-up form start -->
+      <form class="contact-form" id="contact-form"> <!-- Sign-up form start -->
 
         <div class="contact-form-emailGroup">
           <label for="email">Email adress</label>
-          <span id="error-message" class="error-message">Valid email required</span>
+          <span id="error-message" class="error-message"></span>
         </div>
-        <input type="email" id="email" name="email" placeholder="email@company.com" title="Valid email required"
-          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9\-]+(\.[a-z0-9\-]+)*(\.[a-z]{2,15})$" required>
+        <input type="email" id="email" name="email" placeholder="email@company.com" title="Valid email required" required>
+  
         <input class="button" type="submit" value="Subscribe to monthly newsletter"> <!-- Sign-up form end -->
 
       </form>
 
-      <div class="contact-form-response none"> <!-- Success message start -->
+      <div id="contact-form-response" class="contact-form-response none"> <!-- Success message start -->
 
         <div class="response-description">
           <img src="./assets/images/icon-success.svg" alt="icon success">
 
           <h2>Thanks for subscribing!</h2>
 
-          <p>A confirmation email has been sent to <strong>ash@loremcompany.com.</strong> Please open it and click the
+          <p>A confirmation email has been sent to <strong id="email-response"></strong> Please open it and click the
             button inside to confirm your subscription.</p>
         </div>
 
-        <input class="button" type="button" value="Dismiss message"></input>
+        <input id="reset-button" class="button" type="button" value="Dismiss message"></input>
 
       </div> <!-- Success message end -->
 
@@ -72,6 +72,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+  <script src="./script.js"></script>
 </body>
 
 </html>
