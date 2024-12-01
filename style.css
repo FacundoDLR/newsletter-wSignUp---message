@@ -21,6 +21,8 @@
   --Charcoal-Grey: hsl(235, 18%, 26%);
   --Grey: hsl(231, 7%, 60%);
   --White: hsl(0, 0%, 100%);
+
+  --Spacing: 1.3rem;
 }
 
 *,
@@ -34,6 +36,7 @@ body {
   font-family: var(--font-primary);
   color: var(--Dark-Slate-Grey);
 }
+
 h1 {
   margin: 0;
   letter-spacing: var(--letter-spacing);
@@ -51,6 +54,9 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
+img {
+  width: 100%;
+}
 .container {
   padding: 1.5rem;
   height: 100%;
@@ -63,7 +69,7 @@ main {
 .container > div p,
 ul,
 .contact-form input[type="email"] {
-  margin-block-end: 1.3rem;
+  margin-block-end: var(--Spacing);
 }
 
 ul li {
@@ -122,19 +128,10 @@ ul li::before {
   background-color: rgb(255, 228, 228);
   color: var(--form-error-color);
 }
-.shake{
+
+.shake {
   animation: error-shake 0.5s ease-in-out;
 }
-/* .contact-form-error {
-  background-color: var(--form-error-color);
-  color: var(--White);
-  transition: all 800ms ease;
-}
-.contact-form-error.is-active {
-  display: block;
-  animation: show-message 1s 1 normal 0s ease-out both;
-}*/
-
 @keyframes error-shake {
   0% {
     transform: translateX(0);
@@ -151,7 +148,7 @@ ul li::before {
   100% {
     transform: translateX(0);
   }
-} 
+}
 
 .button {
   background-color: var(--Dark-Slate-Grey);
@@ -196,4 +193,40 @@ ul li::before {
 
 .none {
   display: none;
+}
+
+@media (width > 768px) {
+  main {
+    flex-direction: row-reverse;
+    align-items: stretch; 
+    padding: 2rem 5rem; 
+    justify-content: center;
+  }
+  .left, .right {
+    width: calc(50% - 1.5rem); 
+  }
+  img{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  .container{
+    --Spacing: 1.5rem;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 4em;
+  }
+
+  .contact-form-response{
+    justify-content: flex-start;
+    max-width: 23rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .response-description img {
+    min-width: inherit;
+  }
+
 }

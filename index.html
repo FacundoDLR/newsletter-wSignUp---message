@@ -20,10 +20,17 @@
 
   <main>
 
-    <img id="hero-img" class=" " src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+    <picture id="hero-img" class="right">
+      <!-- (desktop) -->
+      <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1024px)">
+      <!-- (mobile) -->
+      <source srcset="./assets/images/illustration-sign-up-mobile.svg" media="(max-width: 1023px)">
+      <!-- predeterminate -->
+      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Descripción de la imagen">
+    </picture>
 
-    <div class="container">
-      <div id="hero-text" class=" ">
+    <div class="container left">
+      <div id="hero-text" class="">
         <h1>Stay updated!</h1>
 
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
