@@ -202,9 +202,7 @@ ul li::before {
     padding: 2rem 5rem; 
     justify-content: center;
   }
-  .left, .right {
-    width: calc(50% - 1.5rem); 
-  }
+
   img{
     height: 100%;
     object-fit: cover;
@@ -229,4 +227,10 @@ ul li::before {
     min-width: inherit;
   }
 
+}
+
+@media (width > 1440px) {
+  .left, .right {
+    width: calc(50% - 1.5rem); 
+  }
 }
