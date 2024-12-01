@@ -26,7 +26,7 @@ Your users should be able to:
 
 **PC Screenshot (1440x900)**
 
-<img src="https://newsletter-w-sign-up-message.vercel.app/assets/screenshots/desktop-herohttps://newsletter-w-sign-up-message.vercel.app/png" width="1280" height="auto">
+<img src="https://newsletter-w-sign-up-message.vercel.app/assets/screenshots/desktop-hero.png" width="1280" height="auto">
 
 **Mobile Screenshot (375x667)**
 
