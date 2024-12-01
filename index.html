@@ -30,9 +30,9 @@
 
 <body>
 
-  <main>
+  <main id="main" class=" ">
 
-    <picture id="hero-img" class="right">
+    <picture class="right">
       <!-- (desktop) -->
       <source srcset="https://newsletter-w-sign-up-message.vercel.app/assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1024px)">
       <!-- (mobile) -->
@@ -42,7 +42,7 @@
     </picture>
 
     <div class="container left">
-      <div id="hero-text" class="">
+      <div>
         <h1>Stay updated!</h1>
 
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -68,24 +68,24 @@
 
       </form>
 
-      <div id="contact-form-response" class="contact-form-response none"> <!-- Success message start -->
+      
+    </div>
+    
+  </main>
+  <div id="contact-form-response" class="contact-form-response none"> <!-- Success message start -->
 
-        <div class="response-description">
-          <img src="https://newsletter-w-sign-up-message.vercel.app/assets/images/icon-success.svg" alt="icon success">
+    <div class="response-description">
+      <img src="https://newsletter-w-sign-up-message.vercel.app/assets/images/icon-success.svg" alt="icon success">
 
-          <h2>Thanks for subscribing!</h2>
+      <h2>Thanks for subscribing!</h2>
 
-          <p>A confirmation email has been sent to <strong id="email-response"></strong> Please open it and click the
-            button inside to confirm your subscription.</p>
-        </div>
-
-        <input id="reset-button" class="button" type="button" value="Dismiss message"></input>
-
-      </div> <!-- Success message end -->
-
+      <p>A confirmation email has been sent to <strong id="email-response"></strong> Please open it and click the
+        button inside to confirm your subscription.</p>
     </div>
 
-  </main>
+    <input id="reset-button" class="button" type="button" value="Dismiss message"></input>
+
+  </div> <!-- Success message end -->
 
 
   <footer class="attribution">

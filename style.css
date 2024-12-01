@@ -35,6 +35,7 @@
 body {
   font-family: var(--font-primary);
   color: var(--Dark-Slate-Grey);
+  height: 100vh;
 }
 
 h1 {
@@ -97,6 +98,7 @@ ul li::before {
   border-radius: 8px;
   display: block;
 }
+
 .contact-form-emailGroup {
   display: flex;
   justify-content: space-between;
@@ -167,17 +169,19 @@ ul li::before {
 .contact-form-response {
   place-items: center;
   height: 100%;
-  padding-block-start: 8rem;
+  padding: 8rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: var(--White);
 }
 .response-description img {
   max-width: 50px;
   height: auto;
 }
 .response-description img,
-.response-description h2 {
+.response-description h2,
+.response-description p {
   padding-block-end: 1.3rem;
 }
 
@@ -196,41 +200,52 @@ ul li::before {
 }
 
 @media (width > 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    place-content: center;
+    height: 100vh;
+    background-color: var(--Dark-Slate-Grey);
+  }
   main {
     flex-direction: row-reverse;
-    align-items: stretch; 
-    padding: 2rem 5rem; 
-    justify-content: center;
+    align-items: stretch;
+    padding: 2rem;
+    min-width: 62.5rem;
+    max-height: 37.5rem;
+    border-radius: 2rem;
+    background-color: var(--White);
   }
 
-  img{
+  img {
     height: 100%;
     object-fit: cover;
     border-radius: 1rem;
   }
+  .left,
+  .right {
+    width: calc(50% - 1.5rem);
+  }
 
-  .container{
+  .container {
     --Spacing: 1.5rem;
     justify-content: center;
   }
   h1 {
-    font-size: 4em;
+    font-size: 3.5em;
   }
 
-  .contact-form-response{
+  .contact-form-response {
     justify-content: flex-start;
     max-width: 23rem;
     margin-left: auto;
     margin-right: auto;
+    height: max-content;
+    padding: 2.5rem;
+    border-radius: 1rem;
   }
+
   .response-description img {
     min-width: inherit;
-  }
-
-}
-
-@media (width > 1440px) {
-  .left, .right {
-    width: calc(50% - 1.5rem); 
   }
 }
